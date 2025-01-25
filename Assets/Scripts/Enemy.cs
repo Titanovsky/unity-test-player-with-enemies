@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class Player : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [Inject] private IWeaponService _weapon;
 
@@ -11,6 +11,6 @@ public class Player : MonoBehaviour
     {
         _weapon.Setup();
 
-        Debug.Log($"Player weapon: {_weapon.GetHashCode()}");
+        Debug.Log($"Enemy weapon: {_weapon.GetHashCode()}");
     }
 }
